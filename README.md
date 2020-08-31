@@ -22,9 +22,29 @@ Otherwise, it can be run with a WSGI server like Gunicorn.
 $ gunicorn serve-model:app
 ```
 
+## Testing the API
+
+There's a supplied Dockerfile for testing the model API.
+
+**1) Build the container**
+```bash
+docker build -t py-model-api .
+```
+
+**2) Run the container**
+```bash
+docker run --name my_model_api --rm -p 8000:8000 py-model-api
+```
+
+**3) Query the API**
+
+```bash
+curl "http://localhost:8000/iris?input=\[1,3,5,7\]"
+```
+
 ## Using the API
 
-### `/iris?input=<data>`
+### GET `/iris?input=<data>`
 
 The endpoint for the model is `/iris` and it takes one argument called `input` which is either a single number of an array of numbers to make predictions.
 
