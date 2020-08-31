@@ -61,14 +61,14 @@ def iris_predict():
     # Can the input be processed?
     try:
         data = format_input(request.args.get("input"))
-    except Exception as e:
-        return fmt_error(f"Error formatting input: {e}")
+    except:
+        return fmt_error("Error formatting input")
 
     # Can the model make a prediction?
     try:
         prediction = predict(model,data)
-    except Exception as e:
-        return fmt_error(f"Error making prediction: {e}")
+    except:
+        return fmt_error("Error making prediction")
 
     # Return the prediction as JSON
     return fmt_prediction(prediction)
