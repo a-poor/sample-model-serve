@@ -24,7 +24,7 @@ $ gunicorn serve-model:app
 
 ## Testing the API
 
-There's a supplied Dockerfile for testing the model API.
+There's a supplied [`Dockerfile`](./Dockerfile) for testing the model API.
 
 **1) Build the container**
 ```bash
