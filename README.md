@@ -4,6 +4,15 @@ _created by Austin Poor_
 
 This repo is a demo of serving a `scikit-learn` model as an API using `Flask`. For the purposes of this example the model uses the iris dataset to predict `petal-width` using `petal-length`.
 
+I've created a hosted version of the API on Heroku here:
+[`https://demo-model-api.herokuapp.com/`](https://demo-model-api.herokuapp.com/)
+
+You can test it out with the following command:
+
+```bash
+curl "https://demo-model-api.herokuapp.com/iris?input=\[1,3,5,7\]"
+```
+
 ## Scripts
 
 ![iris data](plots/iris_data.png)
