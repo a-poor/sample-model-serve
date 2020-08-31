@@ -73,6 +73,10 @@ def iris_predict():
     # Return the prediction as JSON
     return fmt_prediction(prediction)
 
+@app.errorhandler(404)
+def error(e):
+    return fmt_error(f"API endpoint error. Endpoint '{request.path}' does not exist.")
+
     
 # Run the app in debug mode
 if __name__ == "__main__":

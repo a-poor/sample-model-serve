@@ -61,7 +61,20 @@ The API would repond to the request `/iris?input=[1]` with a response similar to
 
 ### Possible Error Responses
 
+**Error type:** Bad endpoint
+
+*Request:* `/titanic?input=[1,2,3]`
+
+```json
+{
+  "message": "API endpoint error. Endpoint '/titanic' does not exist.", 
+  "type": "error"
+}
+```
+
 **Error type:** No arguments provided
+
+*Request:* `/iris`
 
 ```json
 {
@@ -72,6 +85,8 @@ The API would repond to the request `/iris?input=[1]` with a response similar to
 
 **Error type:** No `input` Argument
 
+*Request:* `/iris?data=[1]`
+
 ```json
 {
     "message": "No input data provided",
@@ -80,6 +95,8 @@ The API would repond to the request `/iris?input=[1]` with a response similar to
 ```
 
 **Error type:** Bad input data
+
+*Request:* `/iris?input=test`
 
 ```json
 {
