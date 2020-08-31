@@ -2,6 +2,7 @@
 
 _created by Austin Poor_
 
+![iris data](plots/iris_data.png)
 
 
 
